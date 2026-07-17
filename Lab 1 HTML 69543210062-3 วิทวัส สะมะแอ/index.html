@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>เว็บไซต์แนะนำตัวเอง</title>
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body {
+            font-family: "Tahoma", "Segoe UI", sans-serif;
+            line-height: 1.6;
+            color: #222;
+            background: #f4f6fa;
+        }
+        header {
+            background: #0b2545;
+            color: #fff;
+            padding: 30px 20px;
+            text-align: center;
+        }
+        header img {
+            border-radius: 50%;
+            border: 3px solid #4fc3f7;
+            margin-bottom: 15px;
+        }
+        header h1 { font-size: 2rem; }
+        header p { color: #9fd3ff; margin-top: 5px; }
+
+        nav {
+            background: #123a63;
+        }
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        nav ul li a {
+            display: block;
+            color: #fff;
+            text-decoration: none;
+            padding: 14px 20px;
+        }
+        nav ul li a:hover { background: #4fc3f7; color: #0b2545; }
+
+        main {
+            max-width: 900px;
+            margin: 30px auto;
+            padding: 0 20px;
+        }
+        section {
+            background: #fff;
+            padding: 25px;
+            margin-bottom: 25px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+        }
+        section h2 {
+            color: #0b2545;
+            border-left: 5px solid #4fc3f7;
+            padding-left: 10px;
+            margin-bottom: 10px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
+        }
+        table, th, td {
+            border: 1px solid #ccc;
+        }
+        th, td {
+            padding: 10px;
+            text-align: center;
+        }
+        th { background: #0b2545; color: #fff; }
+
+        form label {
+            display: block;
+            margin-top: 12px;
+            font-weight: bold;
+        }
+        form input, form textarea {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        form button {
+            margin-top: 15px;
+            background: #4fc3f7;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+        form button:hover { background: #0b2545; color: #fff; }
+
+        .social a {
+            display: inline-block;
+            margin-right: 12px;
+            padding: 8px 16px;
+            background: #0b2545;
+            color: #fff;
+            border-radius: 20px;
+            text-decoration: none;
+        }
+        .social a:hover { background: #4fc3f7; color: #0b2545; }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: #0b2545;
+            color: #fff;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ส่วนหัวของเว็บไซต์: แสดงชื่อและรูปโปรไฟล์ -->
+    <header>
+        <img src="itsme.jpg" alt="itme" width="150" height="150">
+        <h1>นายวิทวัส สะมะแอ
+        </h1>
+        <p>นักศึกษาสาขาวิชาวิศวกรรมซอฟแวร์</p>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#about">เกี่ยวกับฉัน</a></li>
+            <li><a href="#skills">ทักษะ</a></li>
+            <li><a href="#education">การศึกษา</a></li>
+            <li><a href="#contact">ติดต่อ</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section id="about">
+            <h2>เกี่ยวกับฉัน</h2>
+            <p>สวัสดีครับ ผมนายวิทวส สะมะแอ เป็นนักศึกษาชั้นปีที่ 1 สาขาวิชาวิศวกรรมซอฟแวร์
+                มีความสนใจด้านการพัฒนาเว็บไซต์และแอปพลิเคชันมือถือ</p>
+            <p>ในเวลาว่างผมชอบอ่านหนังสือเกี่ยวกับเทคโนโลยีใหม่ ๆ และรวมถึงเรียนรู้เครื่องมือพัฒนาซอฟต์แวร์เพิ่มเติมอยู่เสมอ</p>
+        </section>
+
+        <section id="skills">
+            <h2>ทักษะของผม</h2>
+            <ul>
+                <li>MySQL python เบี้ยงต้น</li>
+                <li>JavaScript เบื้องต้น</li>
+                <li>การออกแบบ UI/UX เบื้องต้น</li>
+            </ul>
+        </section>
+
+        <!-- ตารางแสดงตารางเรียน -->
+        <section id="education">
+            <h2>ตารางเรียน</h2>
+            <table>
+                <tr>
+                    <th>วัน</th>
+                    <th>เช้า</th>
+                    <th>บ่าย</th>
+                </tr>
+                <tr>
+                    <td>จันทร์</td>
+                    <td>Modern Web Technology Development</td>
+                    <td>Data Communication and Networks</td>
+                </tr>
+                <tr>
+                    <tr>
+                <td >อังคาร</td>
+                <td>Automatic System in Factory</td>
+                 <td>-</td>
+                </tr>
+                <tr>
+                    <td>พุธ</td>
+                    <td >Laws and Ethics in Information TechnologyกับIntroduction to Software Engineering</td>
+                    <td>-</td>
+                    
+                </tr>
+                <tr>
+                    <td>พฤหัสบดี</td>
+                    <td >-</td>
+                    <td>Computer Architecture and Organization</td>
+                </tr>
+                <tr>
+                    <td>ศุกร์</td>
+                    <td >-</td>
+                    <td>Computer Programming</td>
+                </tr>
+            </table>
+        </section>
+
+        <section id="contact">
+            <h2>ช่องทางการติดต่อ</h2>
+            <p>หากสนใจติดต่องานหรือพูดคุย สามารถคลิ๊กด้านล่างได้เลยครับ</p>
+
+            <div class="social">
+                <a href="https://www.facebook.com/bank.spoon.56" target="_blank">Facebook</a>
+                <a href="https://www.instagram.com/withawat70/" target="_blank">Instagram</a>
+            </div>
+        </section>
+    </main>
+
+    <!-- ส่วนท้ายของเว็บไซต์ -->
+    <footer>
+        <p>&copy; 2026 วิทวัส สะมะแอ. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
