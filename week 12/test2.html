@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ฟังก์ชันคำนวณเกรด (Calculate Grade)</title>
+  <link rel="Stylesheet" href="test2.css">
+</head>
+<body>
+  <div class="container">
+    <h1>ฟังก์ชันคำนวณเกรด (Calculate Grade)</h1>
+
+    <!-- ส่วนที่ 1 - HTML -->
+    <p><b>กรอกคะแนน:</b></p>
+    <div class="row">
+      <input type="number" id="scoreInput" placeholder="0 - 100">
+      <button type="button" onclick="runGrade()">คำนวณเกรด</button>
+    </div>
+    <div id="outputBox">ผลลัพธ์จะปรากฏที่นี่...</div>
+  </div>
+
+  <script>
+    // ส่วนที่ 2 - ฟังก์ชันคำนวณเกรด
+    function calculateGrade(score) {
+      if (score >= 80) {
+        return "A";
+      } else if (score >= 70) {
+        return "B";
+      } else if (score >= 60) {
+        return "C";
+      } else if (score >= 50) {
+        return "D";
+      } else {
+        return "F";
+      }
+    }
+
+    // ส่วนที่ 3 - ฟังก์ชันรับเกรด
+    function runGrade() {
+      const output = [];
+      const box = document.getElementById("outputBox");
+      const raw = document.getElementById("scoreInput").value;
+      const score = Number(raw);
+
+      // ตรวจค่าว่างหรือผิด
+      if (raw.trim() === "" || isNaN(score) || score < 0 || score > 100) {
+        output.push("⚠ กรุณากรอกคะแนน 0-100");
+        box.textContent = output.join("\n");
+        box.classList.add("error");
+        return;
+      }
+
+      box.classList.remove("error");
+
+      const grade = calculateGrade(score);
+
+      output.push("คะแนน: " + score);
+      output.push("เกรดที่ได้: " + grade);
+
+      console.log("คะแนน:", score);
+      console.log("เกรด:", grade);
+
+      box.textContent = output.join("\n");
+    }
+  </script>
+</body>
+</html>
